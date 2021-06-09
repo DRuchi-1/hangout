@@ -17,12 +17,12 @@ pipeline {
 		}
 		stage('docker image') {
 		    steps {
-		        agent {
+		        
 		        dockerfile {
 		            filename 'Dockerfile'
 		            label 'techsriman/hangout:2.0'
 		        }
-		        }
+		        
 		    }
 		}
 	}
