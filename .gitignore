@@ -3,6 +3,12 @@
 
 # Log file
 *.log
+.metadata
+.settings
+.mvn
+.classpath
+.project
+target/
 
 # BlueJ files
 *.ctxt
