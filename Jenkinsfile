@@ -18,11 +18,10 @@ pipeline {
 		stage('docker image') {
 		    steps {
 		        
-		        dockerfile {
-		            filename 'Dockerfile'
-		            label 'techsriman/hangout:2.0'
-		        }
-		        
+		        script {
+                    def customImage = docker.build("techsriman/hangout:${env.BUILD_ID}")
+                    //customImage.push()
+                }
 		    }
 		}
 	}
